@@ -1,0 +1,16 @@
+import Feather from '@expo/vector-icons/Feather';
+import {View} from 'react-native';
+import globalStyles from '../globalStyles';
+interface LogoProps {
+    size?: number,
+    color?: string,
+    bgColor?: string
+}
+
+export function Logo({size = 70, color = "#ffffff", bgColor=globalStyles.colors.azul600}: LogoProps) {
+    return (
+        <View style={{backgroundColor: bgColor, padding: 5}} className="rounded-lg flex items-center justify-center">
+            <Feather name="activity" size={size} color={color}  />
+        </View>
+    )
+}
