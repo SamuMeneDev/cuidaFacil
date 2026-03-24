@@ -9,8 +9,8 @@ interface LogoProps {
 
 export function Logo({size = 70, color = "#ffffff", bgColor=globalStyles.colors.azul600}: LogoProps) {
     return (
-        <View style={{backgroundColor: bgColor, padding: 5}} className="rounded-lg flex items-center justify-center">
-            <Feather name="activity" size={size} color={color}  />
+        <View style={{backgroundColor: bgColor, padding: 5, width:size, height:size}} className="rounded-2xl flex items-center justify-center">
+            <Feather name="activity" size={size-16} color={color}  />
         </View>
     )
 }
