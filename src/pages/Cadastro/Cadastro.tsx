@@ -14,6 +14,11 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Cadastro() {
     const navigation = useNavigation()
+    const sexoList = [
+        {id: 1, name: "Feminino", value: "f"},
+        {id: 2, name: "Masculino", value: "m"},
+    ]
+
 
     return (
         <SafeAreaView style={{flex: 1}}>
@@ -34,10 +39,10 @@ export default function Cadastro() {
                     <InputSenha placeholder="Crie uma senha" />
 
                     {/* DATA NASC E SEXO */}
-                    <View className="flex-row justify-around">
+                    <View className="flex-row items-end justify-around">
                         {/* DATA NASC */}
                         <View className="w-[45%]">
-                            <Text className="text-base font-normal text-sky-900">Data de Nascimento</Text>
+                            <Text className="text-xs font-normal text-sky-900">Data de Nascimento</Text>
                             <InputDate mask={Masks.DATE_DDMMYYYY} >
                                 <Feather name="calendar" color={globalStyles.colors.azul600} size={20} />
                             </InputDate>
@@ -45,11 +50,8 @@ export default function Cadastro() {
 
                         {/* SEXO */}
                         <View className="w-[45%]">
-                            <Text>Sexo</Text>
-                            <Select>
-                                <Picker.Item value="f" label="Feminino" />
-                                <Picker.Item value="m" label="Masculino" />
-                            </Select>
+                            <Text className="text-xs font-normal text-sky-900">Sexo</Text>
+                            <Select labelPropName="name" list={sexoList} valuePropName="value" />
                         </View>
                     </View>
                 </View>
