@@ -39,7 +39,7 @@ export function Login() {
                     </View>
                     {/* LOGAR */}
                     <View className="items-center">
-                        <TextButton />
+                        <TextButton boxStyles="bg-sky-600 border-sky-700" title="Logar" />
                     </View>
 
 
