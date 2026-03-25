@@ -6,6 +6,11 @@ const globalStyles =  {
         azul400: "#4B8EBD",
         azul500: "#33709B",
         azul600: "#195076",
+    },
+
+
+    components: {
+        nativeBorder: "border rounded-lg border-indigo-200 bg-indigo-100"
     }
 }
 

@@ -2,16 +2,17 @@ import globalStyles from "@/globalStyles";
 import { Feather } from "@expo/vector-icons";
 import { useState } from "react";
 import { TextInput, TextInputProps, View, Pressable } from "react-native";
+import StyleProps from "../../StylesClassProps";
 
-interface InputSenhaProps extends TextInputProps {}
+interface InputSenhaProps extends TextInputProps, StyleProps {}
 
-export default function InputSenha({...props}: InputSenhaProps) {
+export default function InputSenha({boxStyles=`${globalStyles.components.nativeBorder}`,inputStyles=``,...props}: InputSenhaProps) {
     const [mostrarSenha, setMostrarSenha] = useState(false);
 
     return (
-        <View className="border flex-row justify-between items-center border-indigo-200 p-1 rounded-xl bg-indigo-100">
-            <TextInput secureTextEntry={!mostrarSenha} {...props} className="w-[90%]"  />
-            <Pressable onPress={()=>setMostrarSenha(!mostrarSenha)} className="flex items-center w-[10%]">
+        <View className={`flex-row justify-between items-center p-1 ${boxStyles}`}>
+            <TextInput secureTextEntry={!mostrarSenha} {...props} className={`outline-none w-[90%] ${inputStyles}`}  />
+            <Pressable onPress={()=>setMostrarSenha(!mostrarSenha)} className="flex items-end w-[10%]">
                 <Feather name={mostrarSenha?"eye-off":"eye"} color={globalStyles.colors.azul600} size={20} />
             </Pressable>
         </View>
