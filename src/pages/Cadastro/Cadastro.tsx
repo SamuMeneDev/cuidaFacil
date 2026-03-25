@@ -14,6 +14,11 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Cadastro() {
     const navigation = useNavigation()
+    const sexoList = [
+        {id: 1, name: "Feminino", value: "f"},
+        {id: 2, name: "Masculino", value: "m"},
+    ]
+
 
     return (
         <SafeAreaView style={{flex: 1}}>
@@ -46,10 +51,7 @@ export default function Cadastro() {
                         {/* SEXO */}
                         <View className="w-[45%]">
                             <Text className="text-xs font-normal text-sky-900">Sexo</Text>
-                            <Select>
-                                <Picker.Item value="f" label="Feminino" />
-                                <Picker.Item value="m" label="Masculino" />
-                            </Select>
+                            <Select labelPropName="name" list={sexoList} valuePropName="value" />
                         </View>
                     </View>
                 </View>

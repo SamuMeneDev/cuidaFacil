@@ -8,9 +8,9 @@ interface NavbarProps extends StyleClassProps {
 
 export default function Navbar({...props}: NavbarProps) {
     return (
-        <View className={`${props.boxStyles} flex-row items-center justify-between bg-sky-700 p-2`}>
+        <View className={`${props.boxStyles} flex-row items-center justify-between bg-sky-700 p-2 py-3`}>
             <Pressable>
-                <Feather name="activity" size={20} color={"white"}  />
+                <Feather name="activity" size={24} color={"white"}  />
             </Pressable>
             <Text className={`${props.textStyles} text-lg text-white`}>{props.pageName}</Text>
             <Pressable>
