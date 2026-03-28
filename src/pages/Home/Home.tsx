@@ -12,7 +12,7 @@ export default function Home() {
             </View>
             {/* "GRID" COM OS ÍCONES */}
             <View className="p-2 flex-row gap-1 justify-around flex-wrap">
-                <CardOption cardName="Água" type="ionicons" name="water" />
+                <CardOption color={"white"} cardName="Água" type="ionicons" name="water" />
                 <CardOption cardName="Alergias" type="ionicons" name="medical-sharp" />
                 <CardOption cardName="Emergência" type="ionicons" name="alert-circle" />
                 <CardOption cardName="Glicemia" type="fontisto" name="blood" />

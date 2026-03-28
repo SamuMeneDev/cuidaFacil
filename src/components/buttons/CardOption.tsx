@@ -30,10 +30,14 @@ export default function CardOption({boxStyles, size=24, color="black", textStyle
     }
     
     return (
-        <Pressable {...props} className={`${boxStyles} w-[40%] h-[40%] justify-center items-center border rounded-xl`} >
-            <Text className={`${textStyles}`}>{props.cardName}</Text>
+        <Pressable {...props} className={`${boxStyles} aspect-square w-[40%] h-[40%] items-center border rounded-xl`} >
+            <View className=" w-full h-[25%] items-center rounded-t-xl">
+                <Text className={`${textStyles}`}>{props.cardName}</Text>
+            </View>
             {/* RENDERIZAÇÃO DO ÍCONE */}
-            {handleIcon(props.type, props.name, color, size)}
+            <View className="bg-cyan-500 h-[75%] items-center justify-center w-full rounded-b-xl">
+                {handleIcon(props.type, props.name, color, size)}
+            </View>
         </Pressable>
     )
 }

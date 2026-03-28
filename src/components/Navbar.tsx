@@ -12,7 +12,7 @@ export default function Navbar({...props}: NavbarProps) {
             <Pressable>
                 <Feather name="activity" size={24} color={"white"}  />
             </Pressable>
-            <Text className={`${props.textStyles} text-lg text-white`}>{props.pageName}</Text>
+            <Text className={`${props.textStyles} text-2xl text-white`}>{props.pageName}</Text>
             <Pressable>
                 <Feather name="settings" size={20} color={"white"} />
             </Pressable>
