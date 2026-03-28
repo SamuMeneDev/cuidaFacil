@@ -21,9 +21,9 @@ export default function Select({ ...props}:SelectProps) {
 
     return (
         <View className={`${globalStyles.components.nativeBorder}`}>
-            <Picker style={{fontSize: 5}} {...props} className='outline-none bg-indigo-100'>
+            <Picker  {...props} className='outline-none bg-indigo-100'>
                 {lista.map(item=> (
-                    <Picker.Item value={(item as any)[props.valuePropName]} label={(item as any)[props.labelPropName]} />
+                    <Picker.Item style={{fontSize: 14}} value={(item as any)[props.valuePropName]} label={(item as any)[props.labelPropName]} />
                 ))}
             </Picker>
         </View>

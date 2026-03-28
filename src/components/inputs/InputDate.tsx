@@ -8,10 +8,10 @@ interface InputDateProps extends MaskInputProps, StyleClassProps {
     children?: ReactNode
 }
 
-export default function InputDate({boxStyles=` ${globalStyles.components.nativeBorder}`, inputStyles="", children=<></>, ...props}: InputDateProps) {
+export default function InputDate({boxStyles, inputStyles="", children=<></>, ...props}: InputDateProps) {
     return (
-        <View className={`${boxStyles} flex-row items-center justify-between rounded-lg`}>
-            <MaskInput className={`${inputStyles} outline-none`} {...props} />
+        <View className={`${boxStyles} rounded-lg ${globalStyles.components.nativeBorder} flex-row items-center justify-between px-3 rounded-lg`}>
+            <MaskInput className={`${inputStyles} outline-none w-[90%]`} {...props} />
             {children}
         </View>
     )
