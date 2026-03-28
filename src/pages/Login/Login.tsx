@@ -28,7 +28,7 @@ export function Login() {
                         {/* EMAIL */}
                         <InputDefault placeholder="Insira o seu email" />
                         {/* SENHA */}
-                        <InputSenha placeholder="Teste" />
+                        <InputSenha placeholder="Insira a sua senha" />
                     </View>
 
                     {/* NÃO TEM UMA CONTA */}

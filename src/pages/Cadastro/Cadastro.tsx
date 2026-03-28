@@ -39,11 +39,11 @@ export default function Cadastro() {
                     <InputSenha placeholder="Crie uma senha" />
 
                     {/* DATA NASC E SEXO */}
-                    <View className="flex-row items-end justify-around">
+                    <View className="flex-row items-stretch justify-between">
                         {/* DATA NASC */}
                         <View className="w-[45%]">
                             <Text className="text-xs font-normal text-sky-900">Data de Nascimento</Text>
-                            <InputDate mask={Masks.DATE_DDMMYYYY} >
+                            <InputDate boxStyles="py-2" mask={Masks.DATE_DDMMYYYY} >
                                 <Feather name="calendar" color={globalStyles.colors.azul600} size={20} />
                             </InputDate>
                         </View>
@@ -56,10 +56,11 @@ export default function Cadastro() {
                     </View>
                 </View>
             </View>
-
+        
+         
             <View className="gap-10 flex-col-reverse">
                 <View className="items-center">
-                    <TextButton boxStyles="bg-sky-800 border-sky-900" title="Criar Conta" />
+                    <TextButton boxStyles="bg-sky-800 border-sky-900 min-w-[60%]" title="Criar Conta" />
                 </View>
                 
                 
