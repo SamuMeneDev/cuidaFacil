@@ -16,7 +16,7 @@ interface CardOptionProps extends StyleClassProps, PressableProps {
     type: "ionicons" | "feather" | "fontisto"
 }
 
-export default function CardOption({boxStyles, size=24, color="black", textStyles="text-2xl", inputStyles, ...props}: CardOptionProps) {
+export default function CardOption({boxStyles, size=40, color="black", textStyles, inputStyles, ...props}: CardOptionProps) {
     // Renderiza o ícone com base nas props
     function handleIcon(type: string, name: string | any, color: ColorValue, size: number) {
         switch (type) {
@@ -30,9 +30,9 @@ export default function CardOption({boxStyles, size=24, color="black", textStyle
     }
     
     return (
-        <Pressable {...props} className={`${boxStyles} aspect-square w-[40%] h-[40%] items-center border rounded-xl`} >
+        <Pressable {...props} className={`${boxStyles} aspect-square w-[40%] h-[40%] items-center border border-stone-300 rounded-xl`} >
             <View className=" w-full h-[25%] items-center rounded-t-xl">
-                <Text className={`${textStyles}`}>{props.cardName}</Text>
+                <Text className={`${textStyles} text-lg`}>{props.cardName}</Text>
             </View>
             {/* RENDERIZAÇÃO DO ÍCONE */}
             <View className="bg-cyan-500 h-[75%] items-center justify-center w-full rounded-b-xl">

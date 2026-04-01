@@ -7,7 +7,9 @@ const globalStyles =  {
         azul500: "#33709B",
         azul600: "#195076",
     },
-
+    glicemia: {
+        
+    },
 
     components: {
         nativeBorder: "border rounded-lg border-indigo-200 bg-indigo-100"
