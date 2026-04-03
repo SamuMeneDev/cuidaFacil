@@ -12,10 +12,10 @@ const Stack = createNativeStackNavigator();
 export default function App() {
   return (
    <NavigationContainer>
-    <Stack.Navigator id='1'>
+    <Stack.Navigator>
+      <Stack.Screen component={Login} name="Login" options={{headerShown:false}} />
       <Stack.Screen component={Home} name="Home" options={{headerShown:false, gestureEnabled: false}} />
       <Stack.Screen component={Splash} name="Splash" options={{headerShown:false, gestureEnabled: false}} />
-      <Stack.Screen component={Login} name="Login" options={{headerShown:false}} />
       <Stack.Screen component={Cadastro} name="Cadastro" options={{headerShown:false}} />
     
       <Stack.Screen component={Glicemia} name='Glicemia' options={{headerShown:false}} />
