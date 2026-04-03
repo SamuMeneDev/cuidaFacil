@@ -44,7 +44,7 @@ export default function Cadastro() {
                         <View className="w-[45%]">
                             <Text className="text-xs font-normal text-sky-900">Data de Nascimento</Text>
                             <InputDate mask={Masks.DATE_DDMMYYYY} >
-                                <Feather name="calendar" color={globalStyles.colors.azul600} size={20} />
+                                <Feather name="calendar" color={globalStyles.azul[600]} size={20} />
                             </InputDate>
                         </View>
 
