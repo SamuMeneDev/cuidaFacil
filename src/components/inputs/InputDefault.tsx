@@ -8,11 +8,5 @@ export default function InputDefault({
   inputStyles = "",
   ...props
 }: InputDefaultProps) {
-  return (
-    <TextInput
-      style={style.container}
-      className={`${inputStyles} w-full`}
-      {...props}
-    />
-  );
+  return <TextInput style={style.container} {...props} />;
 }
