@@ -5,16 +5,17 @@ import Navbar from "@/components/Navbar";
 import { glicemiaStore } from "@/store/glicemia/GlicemiaStore";
 import { GlicemiaType, statusGlicemia } from "@/utils/glicemia";
 import { Feather, MaterialIcons } from "@expo/vector-icons";
-import Checkbox from "expo-checkbox";
-import { useEffect, useState } from "react";
+import { Checkbox } from "expo-checkbox";
+import { useFocusEffect } from "expo-router";
+import { useCallback, useState } from "react";
 import {
-    Alert,
-    FlatList,
-    Pressable,
-    Switch,
-    Text,
-    TouchableOpacity,
-    View,
+  Alert,
+  FlatList,
+  Pressable,
+  Switch,
+  Text,
+  TouchableOpacity,
+  View,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
@@ -108,9 +109,12 @@ export default function Glicemia() {
     setHistorico(data);
   }
 
-  useEffect(() => {
-    getHistorico();
-  }, [historico]);
+  useFocusEffect(
+    useCallback(() => {
+      getHistorico();
+    }, []),
+  );
+
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <Navbar pageName="Glicemia" />
@@ -193,7 +197,7 @@ export default function Glicemia() {
                   Tipo de medição: {result.isJejum ? "Jejum" : "Pós-Refeição"}
                 </Text>
               </View>
-              {result.obs && <Text>Obs: {result.obs}</Text>}
+              {result.obs != "" && <Text>Obs: {result.obs}</Text>}
 
               <Text>Resumo: {result.dica}</Text>
             </Modal.content>
@@ -216,6 +220,7 @@ export default function Glicemia() {
                 contentContainerStyle={{ gap: 4 }}
                 renderItem={({ item }) => (
                   <TouchableOpacity
+                    key={item.id}
                     onPress={() => handleHistoricoItem(item)}
                     activeOpacity={0.7}
                   >
@@ -248,7 +253,7 @@ export default function Glicemia() {
                         </View>
                         <View className="flex-row items-center justify-between px-4">
                           <Text>{item.status}</Text>
-                          {item.obs != "" && (
+                          {item.obs && (
                             <Text className="text-xs" numberOfLines={1}>
                               Obs*
                             </Text>

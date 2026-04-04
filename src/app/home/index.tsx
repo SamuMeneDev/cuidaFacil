@@ -16,7 +16,7 @@ export default function Home() {
       {/* "GRID" COM OS ÍCONES */}
       <View className="p-2 flex-row gap-1 justify-around flex-wrap">
         <CardOption
-          onPress={() => router.navigate("/home/functions/glicemia")}
+          onPress={() => router.navigate("/home/glicemia")}
           color={"white"}
           cardName="Glicemia"
           type="fontisto"

@@ -1,7 +1,8 @@
+import StyleClassProps from "@/StylesClassProps";
 import { Pressable, PressableProps, Text } from "react-native";
 import { styleButton } from "./styleButton";
 
-interface TextButtonProps extends PressableProps {
+interface TextButtonProps extends PressableProps, StyleClassProps {
   title?: string;
 }
 
