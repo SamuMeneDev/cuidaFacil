@@ -23,6 +23,10 @@ const globalStyles = {
   verde: {
     300: "#13AF35",
   },
+  ciano: {
+    600: "#0891B2",
+    500: "#06B6D4",
+  },
 
   components: {
     nativeBorder: "border rounded-lg border-indigo-200 bg-indigo-100",

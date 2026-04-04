@@ -1,7 +1,7 @@
 import globalStyles from "@/globalStyles";
 import { StyleSheet } from "react-native";
 
-export const style = StyleSheet.create({
+export const borderStyle = StyleSheet.create({
   container: {
     borderWidth: 1,
     borderRadius: 4,

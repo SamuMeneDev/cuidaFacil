@@ -1,6 +1,6 @@
 import TextButton from "@/components/buttons/TextButton";
 import InputDefault from "@/components/inputs/InputDefault";
-import InputSenha from "@/components/inputs/InputSenha";
+import InputSenha from "@/components/inputs/InputSenha/InputSenha";
 import { Logo } from "@/components/Logo";
 import { useNavigation } from "@react-navigation/native";
 import { router } from "expo-router";
@@ -42,7 +42,6 @@ export default function Login() {
           <View className="items-center">
             <TextButton
               onPress={() => router.navigate("/home")}
-              boxStyles="bg-sky-600 border-sky-700"
               title="Logar"
             />
           </View>

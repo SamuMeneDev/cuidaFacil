@@ -1,9 +1,9 @@
 import TextButton from "@/components/buttons/TextButton";
-import InputDate from "@/components/inputs/InputDate";
+import InputDate from "@/components/inputs/InputDate/InputDate";
 import InputDefault from "@/components/inputs/InputDefault";
-import InputSenha from "@/components/inputs/InputSenha";
+import InputSenha from "@/components/inputs/InputSenha/InputSenha";
 import { Logo } from "@/components/Logo";
-import Select from "@/components/Select";
+import Select from "@/components/selects/Select";
 import globalStyles from "@/globalStyles";
 import { Feather } from "@expo/vector-icons";
 import { router } from "expo-router";

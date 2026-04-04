@@ -1,12 +1,7 @@
 import { TextInput, TextInputProps } from "react-native";
-import StyleClassProps from "../../StylesClassProps";
-import { style } from "./style";
+import { borderStyle } from "../borderStyle";
+interface InputDefaultProps extends TextInputProps {}
 
-interface InputDefaultProps extends TextInputProps, StyleClassProps {}
-
-export default function InputDefault({
-  inputStyles = "",
-  ...props
-}: InputDefaultProps) {
-  return <TextInput style={style.container} {...props} />;
+export default function InputDefault({ ...props }: InputDefaultProps) {
+  return <TextInput style={borderStyle.container} {...props} />;
 }
